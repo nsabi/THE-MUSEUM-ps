@@ -1,0 +1,176 @@
+.ps-header {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../img/header.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.ps-header--box {
+  box-sizing: border-box;
+  max-width: 1920px;
+  padding: 50px 40px 80px 40px;
+  @include breakpoint(xlarge) {
+    padding: 50px 80px 80px 80px;
+  }
+  margin: 0 auto;
+}
+
+.ps-header__nav {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.ps-header__nav__logo {
+  text-transform: uppercase;
+  color: #fff;
+  @include font(51px, $font, 48px, 600);
+  span {
+    display: block;
+  }
+  flex: 1 1 0px;
+}
+
+.ps-header__nav__page {
+  flex: 0 0 auto;
+  max-width: 100%;
+  margin-right: 0px;
+  margin-left: 40px;
+  display: none;
+  @include breakpoint(medium) {
+  }
+  @include breakpoint(large) {
+    display: block;
+    margin-right: 0px;
+    margin-left: 30px;
+  }
+  @include breakpoint(xlarge) {
+    margin-right: 0px;
+    margin-left: 40px;
+  }
+  @include breakpoint(xxlarge) {
+    margin-right: 40px;
+    margin-left: 0;
+  }
+  @include breakpoint(xxxlarge) {
+    margin-right: 80px;
+    margin-left: 0;
+  }
+  @include breakpoint(max) {
+    margin-right: 80px;
+    margin-left: 0;
+  }
+  a {
+    text-transform: uppercase;
+    color: #fff;
+    @include font(21px, $font, 19px, 600);
+    text-decoration: none;
+    display: block;
+    position: relative;
+    &:before {
+      width: 0px;
+      height: 4px;
+      transition: ease 300ms width;
+      content: "";
+      bottom: -8px;
+      position: absolute;
+      background-color: #fff;
+    }
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+    }
+    &.ps-header__nav__page--active {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.ps-header__nav__extra {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  font-size: 0;
+  display: flex;
+  @include breakpoint(large) {
+    right: 40px;
+  }
+  @include breakpoint(xlarge) {
+    right: 80px;
+  }
+  @include breakpoint(xxlarge) {
+   
+  flex: 0 0 auto;
+  max-width: 100%;
+    position: static;
+  }
+}
+
+.ps-header__nav__extra__language {
+  padding: 20px 24px;
+  color: #fff;
+  @include font(21px, $font, 19px, 600);
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #d6001c;
+  border-right: 2px solid #c4051e;
+  display: inline-block;
+  transition: 200 ease background-color;
+  &:hover {
+    background-color: #c4051e;
+  }
+}
+
+.ps-header__nav__extra__social {
+  background: #d6001c;
+  display: inline-block;
+  width: 59px;
+  height: 59px;
+  transition: 200 ease background-color;
+  &:hover {
+    background-color: #c4051e;
+  }
+}
+
+.ps-header__nav__extra__social--facebook {
+  background: #d6001c url("../../img/facebook.svg") no-repeat center center;
+}
+.ps-header__nav__extra__social--instagram {
+  background: #d6001c url("../../img/instagram.svg") no-repeat center center;
+}
+.ps-header__nav__extra__social--twitter {
+  background: #d6001c url("../../img/twitter.svg") no-repeat center center;
+}
+
+.ps-header__nav__title {
+  color: #fff;
+  @include font(98px, $font, 96px, 300);
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 160px;
+  width: 100%;
+  @include breakpoint(medium) {
+    width: 60%;
+  }
+  @include breakpoint(large) {
+    width: 40%;
+  }
+}
+
+.ps-header__nav__subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  @include font(36px, $font, 50px);
+  margin: 0;
+  margin-top: 40px;
+  width: 100%;
+  @include breakpoint(medium) {
+    width: 75%;
+  }
+  @include breakpoint(large) {
+    width: 50%;
+  }
+}

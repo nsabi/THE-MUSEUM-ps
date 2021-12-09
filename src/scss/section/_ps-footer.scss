@@ -1,0 +1,322 @@
+.ps-footer {
+    background: #030909;
+    display: flex;
+    flex-flow: row wrap;
+}
+.ps-footer__newsletter {
+    flex: 0 0 100%;
+    max-width: 100%;
+    @include breakpoint(xlarge) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    @include breakpoint(xxxlarge) {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+    @include breakpoint(max) {
+        flex: 0 0 35%;
+        max-width: 35%;
+    }
+    background-color: rgba($color: #fff, $alpha: 0.1);
+}
+
+.ps-footer__dati {
+    flex: 0 0 100%;
+    max-width: 100%;
+    @include breakpoint(xlarge) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    @include breakpoint(xxxlarge) {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+    @include breakpoint(max) {
+        flex: 0 0 65%;
+        max-width: 65%;
+    }
+}
+
+.ps-footer__newsletter__content {
+    padding: 40px;
+    @include breakpoint(xlarge) {
+        padding: 80px 80px 80px 40px;
+    }
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.ps-footer__newsletter__title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    color: #fff;
+    @include font(32px, $font, 42px, 400);
+    margin-bottom: 20px;
+}
+
+.ps-footer__newsletter__input {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+    .ps-footer__newsletter__input__element {
+        > input {
+            width: 100%;
+            appearance: none;
+            padding: px 16px;
+            width: 100%;
+            border: 0px;
+            box-sizing: border-box;
+            background-color: transparent;
+            outline: none;
+            color: #fff;
+            @include font(22px, $font, 31px, 400);
+        }
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            background-color: rgba($color: #fff, $alpha: 0.2);
+        }
+    }
+}
+
+.ps-footer__newsletter__checkbox {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.ps-footer__newsletter__checkbox__element {
+    margin-bottom: 30px;
+    label {
+        color: #fff;
+        @include font(16px, $font, 22px, 400);
+        &:before {
+            width: 17px;
+            height: 17px;
+            background-color: #333333;
+            border-radius: 50%;
+            content: "";
+            box-sizing: border-box;
+            display: inline-block;
+        }
+        &:after {
+            content: "";
+            width: 0px;
+            height: 0px;
+        }
+    }
+    input[type="radio"]:checked + label {
+        position: relative;
+        &:before {
+            border: 2px solid #ffffff;
+        }
+        &:after {
+            content: "";
+            width: 7px;
+            height: 7px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 3px;
+            left: 5px;
+            border-radius: 50%;
+        }
+    }
+    input[type="radio"] {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+    }
+}
+
+.ps-footer__newsletter__link {
+    flex: 0 0 100%;
+    max-width: 100%;
+    a {
+        color: #fff;
+        @include font(28px, $font, 36px, 600);
+        letter-spacing: -0.02em;
+        text-decoration: underline;
+        text-transform: uppercase;
+        &:after {
+            content: "";
+            width: 63px;
+            height: 20px;
+            background: url("../../img/freccia.svg") no-repeat center center;
+            display: inline-block;
+            margin-left: 25px;
+        }
+
+        &:hover {
+            &:after {
+                animation-duration: 0.4s;
+                animation-name: changeMargin;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+        }
+    }
+}
+
+.ps-footer__dati__content {
+    padding: 40px;
+    @include breakpoint(xlarge) {
+        padding: 80px 40px 80px 80px;
+    }
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+}
+
+.ps-footer__dati__content--left {
+    flex: 0 0 100%;
+    max-width: 100%;
+    @include breakpoint(large) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+.ps-footer__dati__content--right {
+    flex: 0 0 100%;
+    max-width: 100%;
+    @include breakpoint(large) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+
+.ps-footer__copyright {
+    background: #d6001c;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+.ps-footer__copyright__content {
+    max-width: 1920px;
+    padding: 30px 40px 30px 40px;
+    @include breakpoint(xlarge) {
+    padding: 30px 80px 30px 80px;
+    }
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    box-sizing: border-box;
+    color: #030909;
+    @include font(16px, $font, 22px, 400);
+    > * {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+.ps-footer__copyright__content--right {
+    text-align: right;
+}
+
+.ps-footer__dati__title {
+    text-transform: uppercase;
+    color: #fff;
+    @include font(32px, $font, 40px, 700);
+}
+
+.ps-footer__dati__maps {
+    a {
+        color: #fff;
+        @include font(16px, $font, 27px, 400);
+        text-decoration: underline;
+    }
+    margin-top: 10px;
+}
+
+.ps-footer__dati__mainpartner {
+    text-transform: uppercase;
+    color: #fff;
+    @include font(22px, $font, 26px, 700);
+    padding: 10px 0 10px 100px;
+    background: url("../../img/fiat.png") no-repeat center left;
+    margin-top: 60px;
+}
+
+.ps-footer__dati__social {
+    margin-top: 60px;
+    font-size: 0;
+    display: flex;
+}
+
+.ps-footer__dati__social__icon {
+    width: 60px;
+    height: 60px;
+}
+
+.ps-footer__dati__social__icon--facebook {
+    background: url("../../img/facebook.svg") no-repeat center center;
+}
+
+.ps-footer__dati__social__icon--instagram {
+    background: url("../../img/instagram.svg") no-repeat center center;
+}
+
+.ps-footer__dati__social__icon--twitter {
+    background: url("../../img/twitter.svg") no-repeat center center;
+}
+
+.ps-footer__dati__legal {
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        color: #fff;
+        @include font(22px, $font, 55px, 400);
+        text-decoration: underline;
+    }
+}
+
+.ps-footer__dati__telefono {
+    color: #fff;
+    @include font(16px, $font, 20px, 400);
+    &:before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: url("../../img/phone.svg") no-repeat center center;
+        display: inline-block;
+        margin-right: 20px;
+        position: relative;
+        top: 4px;
+    }
+}
+
+.ps-footer__dati__mail {
+    a {
+        color: #fff;
+        @include font(16px, $font, 20px, 400);
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+        &:before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background: url("../../img/mail.svg") no-repeat center center;
+            display: inline-block;
+            margin-right: 20px;
+            position: relative;
+            top: 4px;
+        }
+    }
+}

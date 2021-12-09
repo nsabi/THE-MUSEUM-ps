@@ -1,0 +1,53 @@
+.ps-content__dettaglio{
+  background: #232323;
+  padding: 120px 0;
+  margin-bottom: 120px;
+}
+
+.ps-content__dettaglio__content{
+  box-sizing: border-box;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 40px;
+  @include breakpoint(xlarge) {
+  padding: 0 80px;
+  }
+  position: relative;
+}
+
+.ps-content__dettaglio__title{
+  color: #fff;
+  @include font(48px, $font, 56px, 500);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.ps-content__dettaglio__description{
+  color: rgba(#fff,.5);
+  @include font(26px, $font, 36px);
+  margin-bottom: 40px;
+  @include breakpoint(xlarge) {
+  margin-bottom: 80px;
+  }
+}
+
+.ps-content__dettaglio__close{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  right: 40px;
+  @include breakpoint(xlarge) {
+  right: 80px;
+  }
+  color: #fff;
+  @include font(48px, $font, 56px, 700);
+  cursor: pointer;
+}
+
+.ps-swiper__container{
+  margin-left: 40px;
+  @include breakpoint(xlarge) {
+  margin-left: 80px;
+  }
+}

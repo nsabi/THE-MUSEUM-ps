@@ -1,0 +1,22 @@
+/* autoprefixer grid: autoplace */
+@import-normalize;
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+
+$font: "Work Sans", serif;
+
+@import "scss/utilities/_animation.scss";
+@import "scss/utilities/_breakpoint.scss";
+@import "scss/utilities/_mixin.scss";
+
+body {
+  margin: 0px;
+  background-color: #fcf9f1;
+}
+
+@import "scss/section/_ps-header.scss";
+@import "scss/section/_ps-footer.scss";
+@import "scss/section/_ps-content.scss";
+
+@import "scss/components/ps-hamburger";
+@import "scss/components/ps-boxdettaglio";
+@import "scss/components/ps-select";

@@ -1,0 +1,146 @@
+
+@import "../utilities/_breakpoint.scss";
+
+.swiper{
+  padding-bottom: 110px;
+}
+
+.swiper-slide {
+  width: 70%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  margin: 0;
+  border-radius: 50%;
+  border: 8px solid #ffffff;
+  box-sizing: border-box;
+  &:after {
+    content: none;
+  }
+  &.swiper-button-disabled {
+    display: none;
+  }
+
+  top: calc(50% - 115px);
+  width: 100px;
+  height: 100px;
+  @include breakpoint(large) {
+    top: calc(50% - 140px);
+    width: 150px;
+    height: 150px;
+  }
+  @include breakpoint(xxlarge) {
+    top: calc(50% - 175px);
+    width: 220px;
+    height: 220px;
+  }
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+  transition: ease 200ms right;
+  right: -50px;
+  &:hover{
+    right: -35px;
+  }
+  @include breakpoint(large) {
+    right: -75px;
+    &:hover{
+      right: -55px;
+    }
+  }
+  @include breakpoint(xxlarge) {
+    right: -110px;
+    &:hover{
+      right: -90px;
+    }
+  }
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+  transition: ease 200ms right;
+  left: -50px;
+  &:hover{
+    left: -35px;
+  }
+  @include breakpoint(large) {
+    left: -75px;
+    &:hover{
+      left: -55px;
+    }
+  }
+  @include breakpoint(xxlarge) {
+    left: -110px;
+    &:hover{
+      left: -90px;
+    }
+  }
+}
+
+.swiper-pagination{
+  box-sizing: border-box;
+  max-width: 1920px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 0;
+  bottom: 0;
+  left: 0px !important;
+  @include breakpoint(max) {
+    left: calc(50% - 960px) !important;
+  }
+}
+
+.swiper-pagination-bullet{
+  margin: 0;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  @include breakpoint(medium) {
+    margin-right: 20px;
+    width: 60px;
+    height: 60px;
+  }
+  opacity: 1;
+  background: none;
+  position: relative;
+  
+  circle{
+    stroke-dashoffset: 315;
+  }
+&:after{
+    border-radius: 0;
+    background: #FFFFFF;
+    opacity: 0.5;
+    transform: matrix(0.72, -0.72, 0.67, 0.72, 0, 0);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top:15px;
+    right: 15px;
+    @include breakpoint(medium) {
+      width: 14px;
+      height: 14px;
+      top:23px;
+      right: 23px;
+    }
+content: "";
+  }
+  &.swiper-pagination-bullet-active{
+    &:after{
+      opacity: 1;
+      transition: ease 5s opacity;
+    }
+    circle{
+      stroke-dashoffset: 0;
+      transition: ease 5s stroke-dashoffset;
+    }
+  }
+}
+

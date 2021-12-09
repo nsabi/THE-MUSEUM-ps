@@ -1,0 +1,115 @@
+
+.ps-select {
+  width: 100%;
+  height: 40px;
+  background: #fcf9f1;
+  box-sizing: border-box;
+  font-size: 0;
+  cursor: pointer;
+  position: relative;
+  border-bottom: solid 1px #000;
+}
+
+
+.ps-select__content {
+  padding: 5px 10px;
+  &:focus {
+	outline: none;
+  }
+}
+
+.ps-select__items {
+  padding: 0;
+  max-height: 0;
+  width: calc(100% + 2px);
+  background: #fcf9f1;
+  box-sizing: border-box;
+  position: absolute;
+  left: -1px;
+  top: 39px;
+  transition: .4s max-height;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ps-select__item {
+  @include font(15px, $font, 20px);
+  color: #535d66;
+  padding: 10px;
+  border: 1px solid #e6e8ea;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-top: none;
+  box-sizing: border-box;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+	background: #fcf9f1;
+  }
+
+  &:last-child {
+	border-bottom: none;
+  }
+}
+
+
+
+.ps-select__placeholder {
+  @include font(17px, $font, 28px);
+  color: #c1c8ce;
+}
+
+.ps-select__text {
+  @include font(17px, $font, 28px);
+  color: #322f3b;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-right: 20px;
+}
+
+.ps-select__arrow {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transition: .4s transform;
+  background: url("../../img/select.svg") no-repeat center center;
+  width: 20px;
+    height: 13px;
+}
+
+//** ** **//
+//** JS **//
+//** ** **//
+.x-opened {
+  .ps-select__items {
+	max-height: 195px;
+	overflow: auto;
+	border: 2px solid #c1c8ce;
+	background: #FFF;
+	-webkit-overflow-scrolling: touch;
+  }
+
+  .ps-select__arrow {
+	transform: rotate(180deg);
+  }
+}
+
+
+
+.x-selectbox__item--selected {
+  @include font(15px, $font, 20px);
+	color:#535d66;
+  background-color: #fcf9f1;
+  &::after {
+	content: "\E244";
+	@include font(20px, $font, 39px);
+	color: #43b15c;
+	position: absolute;
+	right: 10px;
+	top: 0;
+  }
+}
+

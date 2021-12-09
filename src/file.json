@@ -1,0 +1,44 @@
+[
+  {
+    "title": "titolo",
+    "data": "titolo",
+    "description": "titolo titolo titolo titolo titolo titolo titolo titolo titolo titolo titolo titolo titolo titolo ",
+    "id": 1,
+    "img":[
+      "/img/slider/IMG1.png",
+      "/img/slider/IMG2.png",
+      "/img/slider/IMG3.png",
+      "/img/slider/IMG4.png",
+      "/img/slider/IMG5.png",
+      "/img/slider/IMG6.png"
+    ]
+  },
+  {
+    "title": "Proin condimentum a aliquam gravida.",
+    "data": "Lug 01 - Ott 25, 2020",
+    "description": "titolo titolo titolo titolo titolo titolo titolo titolo titolo titolo titolo titolo titolo titolo ",
+    "id": 2,
+    "img":[
+      "/img/slider/IMG5.png",
+      "/img/slider/IMG6.png",
+      "/img/slider/IMG3.png",
+      "/img/slider/IMG4.png",
+      "/img/slider/IMG1.png",
+      "/img/slider/IMG2.png"
+    ]
+  },
+  {
+    "title": "titoeeeeeelo",
+    "data": "titolo",
+    "description": "titolo titolo titolo titolo titolo titolo titolo titolo titolo titolo titolo titolo titolo titolo ",
+    "id": 666,
+    "img":[
+      "/img/slider/IMG2.png",
+      "/img/slider/IMG1.png",
+      "/img/slider/IMG3.png",
+      "/img/slider/IMG4.png",
+      "/img/slider/IMG5.png",
+      "/img/slider/IMG6.png"
+    ]
+  }
+]
