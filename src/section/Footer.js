@@ -46,7 +46,7 @@ export const Footer = () => {
             </div>
           </div>
           <div className="ps-footer__newsletter__link">
-            <a href="#nolink" className="ps-footer__newsletter__link__element">iscriviti alla newsletter</a>
+            <a href="#nolink" className="ps-footer__newsletter__link__element">iscriviti<span className="ps-hide--small_medium"> alla newsletter</span></a>
           </div>
         </div>
       </div>

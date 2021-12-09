@@ -46,40 +46,40 @@
 
 .swiper-button-next, .swiper-rtl .swiper-button-prev{
   transition: ease 200ms right;
-  right: -50px;
+  right: -80px;
   &:hover{
-    right: -35px;
+    right: -50px;
   }
   @include breakpoint(large) {
-    right: -75px;
+    right: -105px;
     &:hover{
-      right: -55px;
+      right: -75px;
     }
   }
   @include breakpoint(xxlarge) {
-    right: -110px;
+    right: -150px;
     &:hover{
-      right: -90px;
+      right: -110px;
     }
   }
 }
 
 .swiper-button-prev, .swiper-rtl .swiper-button-next{
-  transition: ease 200ms right;
-  left: -50px;
+  transition: ease 200ms left;
+  left: -80px;
   &:hover{
-    left: -35px;
+    left: -50px;
   }
   @include breakpoint(large) {
-    left: -75px;
+    left: -105px;
     &:hover{
-      left: -55px;
+      left: -75px;
     }
   }
   @include breakpoint(xxlarge) {
-    left: -110px;
+    left: -150px;
     &:hover{
-      left: -90px;
+      left: -110px;
     }
   }
 }

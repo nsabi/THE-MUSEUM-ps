@@ -15,7 +15,38 @@
 .ps-hide{
   display: none !important;
 }
+.ps-hide--small_medium{
+  @include breakpoint(small_medium down) {
+    display: none !important;
+  }
+}
 
 .ps-modalopen{
   overflow: hidden !important;
+}
+
+.ps-loader{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 10px solid  #d6001c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ps-loader::after{
+  content: '';
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  border-top: 8px solid #c4051e;
+  animation: ps-rotation .8s linear infinite;
+}
+
+@keyframes ps-rotation{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
 }

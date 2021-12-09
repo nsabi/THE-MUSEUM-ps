@@ -7,7 +7,7 @@
 .ps-header--box {
   box-sizing: border-box;
   max-width: 1920px;
-  padding: 50px 40px 80px 40px;
+  padding: 70px 40px 80px 40px;
   @include breakpoint(xlarge) {
     padding: 50px 80px 80px 80px;
   }
@@ -147,13 +147,14 @@
 
 .ps-header__nav__title {
   color: #fff;
-  @include font(98px, $font, 96px, 300);
+  @include font(70px, $font, 86px, 300);
   letter-spacing: -0.04em;
   text-transform: uppercase;
   margin: 0;
   margin-top: 160px;
   width: 100%;
   @include breakpoint(medium) {
+    @include font(98px, $font, 96px, 300);
     width: 60%;
   }
   @include breakpoint(large) {
@@ -163,11 +164,12 @@
 
 .ps-header__nav__subtitle {
   color: rgba(255, 255, 255, 0.5);
-  @include font(36px, $font, 50px);
+  @include font(26px, $font, 40px);
   margin: 0;
   margin-top: 40px;
   width: 100%;
   @include breakpoint(medium) {
+    @include font(36px, $font, 50px);
     width: 75%;
   }
   @include breakpoint(large) {

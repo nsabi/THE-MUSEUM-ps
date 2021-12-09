@@ -1,7 +1,11 @@
 .ps-content__dettaglio{
   background: #232323;
+  padding: 80px 0;
+  margin-bottom: 80px;
+  @include breakpoint(large) {
   padding: 120px 0;
   margin-bottom: 120px;
+  }
 }
 
 .ps-content__dettaglio__content{
@@ -17,15 +21,23 @@
 
 .ps-content__dettaglio__title{
   color: #fff;
-  @include font(48px, $font, 56px, 500);
+  @include font(38px, $font, 48px, 500);
+  @include breakpoint(large) {
+    @include font(48px, $font, 56px, 500);
+  }
+  letter-spacing: -0.04em;
   text-transform: uppercase;
   margin-bottom: 40px;
+  margin-right: 80px;
 }
 
 .ps-content__dettaglio__description{
   color: rgba(#fff,.5);
-  @include font(26px, $font, 36px);
+  @include font(20px, $font, 30px);
   margin-bottom: 40px;
+  @include breakpoint(large) {
+    @include font(26px, $font, 36px);
+  }
   @include breakpoint(xlarge) {
   margin-bottom: 80px;
   }
@@ -41,7 +53,14 @@
   right: 80px;
   }
   color: #fff;
-  @include font(48px, $font, 56px, 700);
+  width: 30px;
+  height: 30px;
+  @include font(38px, $font, 30px, 300);
+  @include breakpoint(large) {
+    width: 40px;
+    height: 40px;
+    @include font(48px, $font, 48px, 300);
+  }
   cursor: pointer;
 }
 

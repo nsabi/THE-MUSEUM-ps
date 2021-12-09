@@ -8,6 +8,10 @@ $font: "Work Sans", serif;
 @import "scss/utilities/_breakpoint.scss";
 @import "scss/utilities/_mixin.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0px;
   background-color: #fcf9f1;

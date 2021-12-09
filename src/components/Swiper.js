@@ -35,8 +35,8 @@ SwiperCore.use([Navigation, Pagination,Autoplay ]);
       
       navigation
       pagination={pagination}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+      //onSlideChange={() => console.log('slide change')}
+      //onSwiper={(swiper) => console.log(swiper)}
     >
         {sliders.map((slider,index) => <SwiperSlide key={index}><img src={slider} /></SwiperSlide>)}
       
