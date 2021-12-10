@@ -20,7 +20,7 @@ export default ({ sliders }) => {
   const pagination = {
     "clickable": false,
     "renderBullet": function (index, className) {
-      return '<span class="ps-swiper-pagination ' + className + '"><svg width="100%" height="100%" viewBox="0 0 100 100"><linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#D6001C"/></linearGradient><circle stroke-linecap="round" cx="50" cy="50" fill="none" r="48" stroke="url(#a)" stroke-width="2" stroke-dasharray="315"  transform="rotate(-90 50 50)"/></svg></span>';
+      return '<span class="ps-swiper-pagination js-swiper-pagination ' + className + '"><svg width="100%" height="100%" viewBox="0 0 100 100"><linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#D6001C"/></linearGradient><circle stroke-linecap="round" cx="50" cy="50" fill="none" r="48" stroke="url(#a)" stroke-width="2" stroke-dasharray="315"  transform="rotate(-90 50 50)"/></svg></span>';
     }
   };
 
@@ -29,14 +29,20 @@ export default ({ sliders }) => {
       spaceBetween={80}
       slidesPerView={'auto'}
       autoplay={{
-        delay: 5000,
+        delay: 4000,
         disableOnInteraction: false
       }}
-
       navigation
       pagination={pagination}
     //onSlideChange={() => console.log('slide change')}
-    //onSwiper={(swiper) => console.log(swiper)}
+      onSwiper={(swiper) => {
+        if(document.getElementsByClassName("js-swiper-pagination").length > 0){
+          document.getElementsByClassName("js-swiper-pagination")[0].classList.remove("swiper-pagination-bullet-active");
+          setTimeout(function(){ document.getElementsByClassName("js-swiper-pagination")[0].classList.add("swiper-pagination-bullet-active"); }, 1);
+          
+        }
+
+      }}
     >
       {sliders.map((slider, index) => <SwiperSlide key={index}><img src={slider} alt="IMG SLIDER" /></SwiperSlide>)}
 

@@ -58,12 +58,16 @@ export const Content = () => {
           Title
         </div>
         <div className="ps-content__search__select">
-          <p className="ps-content__search__select__label">Label</p>
-          <Select namez="nome" labelz="label" />
+          <p className="ps-content__search__select__label">DATA</p>
+          <div className="ps-content__search__select__item">
+            <Select namez="nome" labelz="Tutte le date" />
+          </div>
         </div>
         <div className="ps-content__search__select">
-          <p className="ps-content__search__select__label">Label</p>
-          <Select namez="nomez" labelz="labelz" />
+          <p className="ps-content__search__select__label">COSA</p>
+          <div className="ps-content__search__select__item">
+            <Select namez="nomez" labelz="Tutte le attività" />
+          </div>
         </div>
       </div>
       {boxdettaglio.length ? (
