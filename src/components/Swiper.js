@@ -23,10 +23,16 @@ export default ({ sliders }) => {
       return '<span class="ps-swiper-pagination js-swiper-pagination ' + className + '"><svg width="100%" height="100%" viewBox="0 0 100 100"><linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#D6001C"/></linearGradient><circle stroke-linecap="round" cx="50" cy="50" fill="none" r="48" stroke="url(#a)" stroke-width="2" stroke-dasharray="315"  transform="rotate(-90 50 50)"/></svg></span>';
     }
   };
+  const breakpoints = {
+    1280: {
+      spaceBetween:80
+    }
+  };
 
   return (
     <Swiper
-      spaceBetween={80}
+      spaceBetween={40}
+      breakpoints={breakpoints}
       slidesPerView={'auto'}
       autoplay={{
         delay: 4000,
