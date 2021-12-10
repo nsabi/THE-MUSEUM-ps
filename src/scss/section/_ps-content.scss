@@ -26,8 +26,8 @@
     max-width: 50%;
   }
   box-sizing: border-box;
-  padding: 0 20px 80px 20px;
-  @include breakpoint(large) {
+  padding: 0 10px 80px 10px;
+  @include breakpoint(xlarge) {
     padding: 0 20px 120px 20px;
   }
 }
