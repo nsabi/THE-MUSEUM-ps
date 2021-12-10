@@ -56,6 +56,8 @@
 .ps-select__placeholder {
   @include font(22px, $font, 30px);
   color: #000;
+  display: block;
+  margin-right: 35px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
