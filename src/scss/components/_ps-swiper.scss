@@ -1,7 +1,6 @@
-
 @import "../utilities/_breakpoint.scss";
 
-.swiper{
+.swiper {
   padding-bottom: 110px;
 }
 
@@ -44,47 +43,49 @@
   }
 }
 
-.swiper-button-next, .swiper-rtl .swiper-button-prev{
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
   transition: ease 200ms right;
   right: -80px;
-  &:hover{
+  &:hover {
     right: -50px;
   }
   @include breakpoint(large) {
     right: -105px;
-    &:hover{
+    &:hover {
       right: -75px;
     }
   }
   @include breakpoint(xxlarge) {
     right: -150px;
-    &:hover{
+    &:hover {
       right: -110px;
     }
   }
 }
 
-.swiper-button-prev, .swiper-rtl .swiper-button-next{
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
   transition: ease 200ms left;
   left: -80px;
-  &:hover{
+  &:hover {
     left: -50px;
   }
   @include breakpoint(large) {
     left: -105px;
-    &:hover{
+    &:hover {
       left: -75px;
     }
   }
   @include breakpoint(xxlarge) {
     left: -150px;
-    &:hover{
+    &:hover {
       left: -110px;
     }
   }
 }
 
-.swiper-pagination{
+.swiper-pagination {
   box-sizing: border-box;
   max-width: 1920px;
   margin: 0 auto;
@@ -97,7 +98,7 @@
   }
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   margin: 0;
   margin-right: 10px;
   width: 40px;
@@ -110,37 +111,36 @@
   opacity: 1;
   background: none;
   position: relative;
-  
-  circle{
+
+  circle {
     stroke-dashoffset: 315;
   }
-&:after{
+  &:after {
     border-radius: 0;
-    background: #FFFFFF;
+    background: #ffffff;
     opacity: 0.5;
     transform: matrix(0.72, -0.72, 0.67, 0.72, 0, 0);
     position: absolute;
     width: 10px;
     height: 10px;
-    top:15px;
+    top: 15px;
     right: 15px;
     @include breakpoint(medium) {
       width: 14px;
       height: 14px;
-      top:23px;
+      top: 23px;
       right: 23px;
     }
-content: "";
+    content: "";
   }
-  &.swiper-pagination-bullet-active{
-    &:after{
+  &.swiper-pagination-bullet-active {
+    &:after {
       opacity: 1;
       transition: ease 5s opacity;
     }
-    circle{
+    circle {
       stroke-dashoffset: 0;
       transition: ease 5s stroke-dashoffset;
     }
   }
 }
-

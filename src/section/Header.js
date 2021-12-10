@@ -26,7 +26,7 @@ export const Header = () => {
                         <a href="#nolink" className="ps-header__nav__extra__social ps-header__nav__extra__social--facebook"><span className="ps-hide">Facebook</span></a>
                         <a href="#nolink" className="ps-header__nav__extra__social ps-header__nav__extra__social--instagram"><span className="ps-hide">Instagram</span></a>
                         <a href="#nolink" className="ps-header__nav__extra__social ps-header__nav__extra__social--twitter"><span className="ps-hide">Twitter</span></a>
-                        <Hamburger/>
+                        <Hamburger />
                     </div>
                 </div>
                 <h1 className="ps-header__nav__title">ARCHIVIO STORICO</h1>

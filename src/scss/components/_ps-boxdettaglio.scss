@@ -49,18 +49,11 @@
   height: 40px;
   top: 0px;
   right: 40px;
+  background: none;
+  background: url("../../img/close.svg") no-repeat center center;
+  border: none;
   @include breakpoint(xlarge) {
     right: 80px;
-  }
-  color: #fff;
-  width: 30px;
-  height: 30px;
-  @include font(38px, $font, 30px, 300);
-  @include breakpoint(large) {
-    width: 40px;
-    height: 40px;
-    content: "";
-    background: url("../../img/close.svg") no-repeat center center;
   }
   cursor: pointer;
 }

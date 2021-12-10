@@ -102,9 +102,8 @@
     right: 80px;
   }
   @include breakpoint(xxlarge) {
-   
-  flex: 0 0 auto;
-  max-width: 100%;
+    flex: 0 0 auto;
+    max-width: 100%;
     position: static;
   }
 }

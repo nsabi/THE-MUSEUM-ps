@@ -130,11 +130,18 @@
     justify-content: space-between;
     flex-flow: row wrap;
     .ps-select {
-      max-width: 50%;
+      flex: 1 1 0px;
     }
     .ps-content__search__select__label {
-      max-width: 50%;
-      margin-bottom: 0px;
+      flex: 0 0 auto;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding-right: 10px;
+    }
+  }
+  @include breakpoint(xlarge) {
+    .ps-content__search__select__label {
+      padding-right: 20px;
     }
   }
 }
@@ -154,8 +161,10 @@
 .ps-content__more {
   text-align: center;
   margin: 0 auto;
-  a {
+  button {
     cursor: pointer;
+    background: none;
+    border: none;
     text-decoration: underline;
     text-transform: uppercase;
     @include font(28px, $font, 36px, 600);

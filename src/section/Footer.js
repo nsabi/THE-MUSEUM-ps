@@ -1,7 +1,7 @@
 export const Footer = () => {
 
 
-  
+
   return (
     <div className="ps-footer">
       <div className="ps-footer__dati">

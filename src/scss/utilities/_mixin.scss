@@ -1,52 +1,56 @@
 @mixin font($size, $family, $line-height: auto, $weight: normal, $style: normal) {
-    font-family: $family;
-    font-size :$size;
-    @if($line-height !=null) {
-        line-height: $line-height;
-    }
-    @if($weight !=null) {
-      font-weight: $weight;
-    }
-    @if($style !=null) {
-      font-style: $style;
-    }
+  font-family: $family;
+  font-size: $size;
+  @if ($line-height !=null) {
+    line-height: $line-height;
   }
+  @if ($weight !=null) {
+    font-weight: $weight;
+  }
+  @if ($style !=null) {
+    font-style: $style;
+  }
+}
 
-.ps-hide{
+.ps-hide {
   display: none !important;
 }
-.ps-hide--small_medium{
+.ps-hide--small_medium {
   @include breakpoint(small_medium down) {
     display: none !important;
   }
 }
 
-.ps-modalopen{
+.ps-modalopen {
   overflow: hidden !important;
 }
 
-.ps-loader{
+.ps-loader {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  border: 10px solid  #d6001c;
+  border: 10px solid #d6001c;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.ps-loader::after{
-  content: '';
+.ps-loader::after {
+  content: "";
   position: absolute;
   width: 55px;
   height: 55px;
   border-radius: 50%;
   border: 8px solid transparent;
   border-top: 8px solid #c4051e;
-  animation: ps-rotation .8s linear infinite;
+  animation: ps-rotation 0.8s linear infinite;
 }
 
-@keyframes ps-rotation{
-  0%{transform: rotate(0deg);}
-  100%{transform: rotate(360deg);}
+@keyframes ps-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

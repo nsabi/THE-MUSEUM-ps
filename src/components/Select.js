@@ -16,8 +16,8 @@ export const Select = ({ namez, labelz }) => {
 
   return (
     <>
-      <div className={'ps-select ' + (open ? "x-opened":"")} onClick={clickOpen}>
-        <div  className="ps-select__content">
+      <div className={'ps-select ' + (open ? "x-opened" : "")} onClick={clickOpen}>
+        <div className="ps-select__content">
           <span className="ps-select__placeholder">{labelz}</span>
           <span className="ps-select__arrow"></span>
         </div>

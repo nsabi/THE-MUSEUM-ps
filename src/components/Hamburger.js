@@ -1,13 +1,13 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export const Hamburger = () => {
 
   const [active, setActive] = useState(false);
 
   useEffect(() => {
-    if(active){
+    if (active) {
       document.body.classList.add("ps-modalopen");
-    }else{
+    } else {
       document.body.classList.remove("ps-modalopen");
     }
     return () => {
@@ -17,12 +17,12 @@ export const Hamburger = () => {
 
   return (
     <>
-      <div className= {'ps-hamburger '+(!active?"":"x-active")}  onClick ={()=> {setActive(!active)}}> 
+      <div className={'ps-hamburger ' + (!active ? "" : "x-active")} onClick={() => { setActive(!active) }}>
         <span className="ps-hamburger__overlay__top"></span>
         <span className="ps-hamburger__overlay__middle"></span>
         <span className="ps-hamburger__overlay__bottom"></span>
       </div>
-      <div className={'ps-hamburger__overlay '+(!active?"":"x-open")} >
+      <div className={'ps-hamburger__overlay ' + (!active ? "" : "x-open")} >
         <nav className="ps-hamburger__overlay__menu">
           <ul>
             <li><a href="#nolink">Visita</a></li>

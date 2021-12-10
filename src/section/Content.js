@@ -14,29 +14,28 @@ export const Content = () => {
 
 
   useEffect(() => {
-    console.log(document.getElementById('boxdettaglio'));
-    if(document.getElementById('boxdettaglio') !== null)
+    if (document.getElementById('boxdettaglio') !== null)
       document.getElementById('boxdettaglio').scrollIntoView({ behavior: 'smooth' });
     SetLoading(false);
     return () => {
 
     }
-  }, [boxs , boxdettaglio])
+  }, [boxs, boxdettaglio])
 
   const loadMore = (ev) => {
     SetLoading(true);
     let newBox = boxs.concat(jsonData);
 
-    setTimeout(function(){
+    setTimeout(function () {
       setBoxs(newBox);
-      SetHasmore(false); 
+      SetHasmore(false);
     }, 300);
 
   }
   const setDettaglio = (ev) => {
-    SetBoxdettaglio(jsonData.filter(t => t.id == ev.target.id));
-    
-    
+    SetBoxdettaglio(jsonData.filter(t => parseInt(t.id) === parseInt(ev.target.id)));
+
+
     let i = 0;
     for (i = 0; i < document.getElementsByClassName("ps-content__box x-active").length; i++) {
       document.getElementsByClassName("ps-content__box x-active")[i].classList.remove("x-active");
@@ -80,11 +79,11 @@ export const Content = () => {
       {hasmore ? (
         <>{loading ? (
           <>
-          <div className="ps-content__loader"><span class="ps-loader"></span></div></>
-      ) : (
-        <></>
-      )}
-          <div className="ps-content__more"><a onClick={loadMore}>load more</a></div>
+            <div className="ps-content__loader"><span className="ps-loader"></span></div></>
+        ) : (
+          <></>
+        )}
+          <div className="ps-content__more"><button onClick={loadMore}>load more</button></div>
         </>
       ) : (
         <></>

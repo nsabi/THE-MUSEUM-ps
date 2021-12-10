@@ -1,10 +1,9 @@
-
-.ps-hamburger{
+.ps-hamburger {
   display: block;
   @include breakpoint(large) {
     display: none;
   }
-cursor: pointer;
+  cursor: pointer;
   z-index: 100;
   background: #d6001c;
   display: inline-block;
@@ -16,59 +15,57 @@ cursor: pointer;
     background-color: #c4051e;
   }
   span {
-    background: #FFF;
+    background: #fff;
     border: none;
     height: 5px;
     width: 32px;
     position: absolute;
     top: 17px;
     left: 15px;
-    transition:  all .35s ease;
+    transition: all 0.35s ease;
     cursor: pointer;
-      
-      &:nth-of-type(2) {
-        top: 27px;
-      }
-      
-      &:nth-of-type(3) {
-        top: 37px;
-      }
+
+    &:nth-of-type(2) {
+      top: 27px;
     }
-    &.x-active {
-      .ps-hamburger__overlay__top {
-        transform: translateY(9px) translateX(0) rotate(45deg);
-      }
-      .ps-hamburger__overlay__middle {
-        opacity: 0;
-      }
-      
-      .ps-hamburger__overlay__bottom {
-        transform: translateY(-11px) translateX(0) rotate(-45deg);
-      }
+
+    &:nth-of-type(3) {
+      top: 37px;
     }
+  }
+  &.x-active {
+    .ps-hamburger__overlay__top {
+      transform: translateY(9px) translateX(0) rotate(45deg);
+    }
+    .ps-hamburger__overlay__middle {
+      opacity: 0;
+    }
+
+    .ps-hamburger__overlay__bottom {
+      transform: translateY(-11px) translateX(0) rotate(-45deg);
+    }
+  }
 }
 
-
-.ps-hamburger__overlay{
+.ps-hamburger__overlay {
   position: fixed;
-  background: #FFF;
+  background: #fff;
   top: 0;
   left: 0;
   width: 100%;
   height: 0%;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .35s, visibility .35s, height .35s;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
   overflow: hidden;
   &.x-open {
-    opacity: .9;
+    opacity: 0.9;
     visibility: visible;
     height: 100%;
   }
 }
 
-
-.ps-hamburger__overlay__menu{
+.ps-hamburger__overlay__menu {
   position: relative;
   height: 70%;
   top: 50%;
@@ -80,11 +77,11 @@ cursor: pointer;
     margin: 0 auto;
     display: inline-block;
     position: relative;
-    height: 100%; 
+    height: 100%;
     li {
       display: block;
       height: 20%;
-      
+
       a {
         color: #c4051e;
         @include font(25px, $font, 22px, 600);
